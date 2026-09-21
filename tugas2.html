@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tugas Individu</title>
+    <link rel="stylesheet" href="format.css">
+</head>
+<body>
+    <h2 style="color:brown; text-align:center; text-decoration:underline;">Form Identitas Diri</h2>
+    <form action="#">
+        <fieldset>
+        <legend style="color: black;"><span style="font-weight: bold;">Identitas Diri</span></legend>
+        <label for="name" style="color:#154DBC"><span style="font-weight: bold;">
+Nama</span></label><br>
+        <input type="text" name="nama" id="nama" placeholder="John Siahaan" /><br></br>
+        <label for="kata sandi" style="color: #154DBC"><span style="font-weight: bold;">Kata Sandi</span></label><br>
+        <input type="password" name="kata sandi" id="kata sandi"  placeholder="kata sandi"/><br></br>
+        <label for="alamat" style="color: #154DBC"><span style="font-weight: bold;">Alamat</span></label><br>
+        <textarea name="alamat" id="alamat" id="alamat" placeholder="Jl.Jambu No.4"></textarea> <br></br>
+
+        <label for="program studi" style="color: #154DBC"><span style="font-weight: bold;">Program Studi:</span></label><br>
+                <select id="program studi" name="Program Studi">
+                    <option value="teknologi_informasi">Teknologi Informasi</option>
+                    <option value="ilmu_komputer">Ilmu Komputer</option>
+                </select><br></br>
+        <label for="jenis kelamin" style="color: #154DBC;"><span style="font-weight: bold;">Jenis Kelamin</span></label><br>
+        <input type="radio" id="laki-laki" name="jenis kelamin" value="laki-laki">
+        <label for="laki-laki">Laki-laki</label>
+         <input type="radio" id="perempuan" name="jenis kelamin" value="perempuan">
+        <label for="perempuan">Perempuan</label><br></br>
+
+        <label for="minat" style="color: #154DBC;"><span style="font-weight: bold;">Minat dan Bakat</span></label><br>
+        <input type="checkbox" id="Membaca" name="Membaca" value="Membaca"/>
+        <label for="Membaca">Membaca</label>
+        <input type="checkbox" id="Menulis" name="Menulis" value="Menulis"/>
+        <label for="Menulis">Menulis</label>
+        <input type="checkbox" id="bermain alat musik" name="bermain alat musik" value="bermain alat musik"/>
+        <label for="bermain alat musik">Bermain alat musik</label>
+        <input type="checkbox" id="Memasak" name="Memasak" value="Memasak"/>
+        <label for="Memasak">Memasak</label>
+        <input type="checkbox" id="olahraga" name="olahraga" value="olahraga"/>
+        <label for="olahraga">Olahraga</label>
+        <input type="checkbox" id="Teknologi" name="Teknologi" value="Teknologi"/>
+        <label for="Teknologi">Teknologi</label>
+        <input type="checkbox" id="lainnya" name="lainnya" value="lainnya"/>
+        <label for="lainnya">Lainnya</label><br></br>
+
+        <button type="submit">Login</button> 
+        <button type="reset">Reset</button>
+        </fieldset>
+
+    
+</body>
+</html>
