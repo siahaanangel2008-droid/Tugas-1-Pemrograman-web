@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LATIHAN JAVASCRIPT DAN HTML</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            padding: 40px;
+        }
+       
+        table {
+            border: 1px solid #7c7c7c;
+            padding: 20px;
+            width: 450px;
+            background-color: #ffffff;
+            margin: 0 auto;
+            border-collapse: separate;
+            border-spacing: 0 12px; 
+            box-shadow: 2px 2px 5px rgba(0,0,0,0.1);
+        }
+        td {
+            font-size: 16px;
+            color: #333;
+        }
+       
+        input[type="number"], input[type="text"] {
+            width: 100%;
+            padding: 6px 10px;
+            font-size: 16px;
+            border: 1px solid green ;
+            box-sizing: border-box;
+        }
+        
+        button {
+            width: 35px;
+            height: 35px;
+            font-size: 16px;
+            margin-right: 6px;
+            cursor: pointer;
+            border: 1px solid black;
+            background-color: #f0f0f0;
+        }
+        button:hover {
+            background-color: #e0e0e0;
+        }
+        /* Kotak output dikunci agar tidak bisa diinput teks manual */
+        input:disabled {
+            background-color: #ffffff;
+            color: #000000;
+            cursor: not-allowed;
+        }
+    </style>
+</head>
+<body>
+
+    <table>
+        
+        <tr>
+            <td style="width: 140px;"><label for="bil1">Input Bilangan 1</label></td>
+            <td><input type="number" id="bil1" value="9"></td>
+        </tr>
+
+      
+        <tr>
+            <td><label for="bil2">Input Bilangan 2</label></td>
+            <td><input type="number" id="bil2" value="3"></td>
+        </tr>
+        
+       
+        <tr>
+            <td></td>
+            <td>
+                <button onclick="hitung('+')">+</button>
+                <button onclick="hitung('-')">-</button>
+                <button onclick="hitung('*')">x</button>
+                <button onclick="hitung('/')">/</button>
+            </td>
+        </tr>
+
+       
+        <tr>
+            <td><label for="output">Output</label></td>
+            <td><input type="text" id="output" value="3" disabled></td>
+        </tr>
+    </table>
+
+<script>
+    function hitung(operator) {
+        let bil1 = parseFloat(document.getElementById('bil1').value);
+        let bil2 = parseFloat(document.getElementById('bil2').value);
+        let hasil = 0;
+
+        if (isNaN(bil1) || isNaN(bil2)) {
+            document.getElementById('output').value = "Masukkan angka!";
+            return;
+        }
+
+        if (operator === '+') {
+            hasil = bil1 + bil2;
+        } else if (operator === '-') {
+            hasil = bil1 - bil2;
+        } else if (operator === '*') {
+            hasil = bil1 * bil2;
+        } else if (operator === '/') {
+            if (bil2 === 0) {
+                hasil = "Tidak bisa dibagi 0";
+            } else {
+                hasil = bil1 / bil2;
+            }
+        }
+
+        document.getElementById('output').value = hasil;
+    }
+</script>
+
+</body>
+</html>
